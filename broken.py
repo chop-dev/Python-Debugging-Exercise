@@ -20,18 +20,15 @@ def partition(numbers, first, last):
     while not done:
         
         while leftmark <= rightmark and numbers[leftmark] <= pivotvalue:
-            
-            # Ensure the loop will end when leftmark reaches a index greater than the pivot value
+           
             # Changes: Incremented leftmark
             leftmark += 1
 
         while numbers[rightmark] >= pivotvalue and rightmark >= leftmark:
             
-            # Ensure the loop will end when rightmark reaches a index smaller than the pivot value
             # Changes: Decrement rightmark
             rightmark -= 1
-        
-        # Ensure the loop is not infinite
+    
         # Changes: Removed -1 after leftmark 
         if rightmark < leftmark:
             done = True
